@@ -1,0 +1,59 @@
+@import "./bootstrap.min.css";
+html {
+    font-size: 1em;
+}
+header{
+    padding: 70px 0;
+}
+
+:root ul{
+    list-style: none;
+    padding:0;
+}
+
+
+.listing{
+    /*margin-top: 25px; --  used bootstrap class instead*/
+}
+
+.listing li{
+    display: inline-block;
+    width: 40%;
+    /*margin: 5% 0;*/
+}
+
+.listing li button{
+    border: none;
+    background: transparent;
+    color: #FFF;
+}
+
+section.container{
+    margin-top: 15px;
+}
+
+a[href].btn-primary{
+    outline:none;
+}
+
+a.logo{
+    height:55px;
+    width:350px;
+    background: url("http://www.chanel.com/img/logo_chanel.svg") scroll no-repeat top left;
+}
+figcaption {
+    position: absolute;
+    top: 10px;
+    padding: 5px 10px;
+    background: #dc3545;
+    min-width: 130px;
+    color: #fff;
+    font-weight: bold;
+}
+.card-title {
+    margin-bottom: .75rem;
+    border-bottom: 1px solid #f1eaea;
+}
+.breadcrumb {
+    font-weight: 700;
+}

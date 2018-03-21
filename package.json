@@ -1,0 +1,40 @@
+{
+  "name": "test-refactoring",
+  "version": "1.0.0",
+  "description": "Refactoring of HTML/JS/CSS web application",
+  "license": "MIT",
+  "author": "CHANEL",
+  "scripts": {
+    "start": "node dist/app.js",
+    "test": "mocha",
+    "build": "gulp build",
+    "dev": "gulp clean && gulp",
+    "clean": "gulp clean"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "~1.13.2",
+    "chai": "^4.1.1",
+    "cookie-parser": "~1.3.5",
+    "dateformat": "^2.0.0",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-notify": "^3.0.0",
+    "http": "0.0.0",
+    "jade": "^1.11.0",
+    "morgan": "~1.6.1",
+    "mysql": "^2.14.1",
+    "orm": "^3.2.4",
+    "request": "^2.81.0",
+    "rimraf": "^2.6.1",
+    "sqlite3": "^3.1.12",
+    "twig": "^1.10.5",
+    "url-parser": "0.0.1",
+    "validator": "^8.0.0"
+  }
+}

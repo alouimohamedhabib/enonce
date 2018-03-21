@@ -1,0 +1,49 @@
+{% extends "layout.twig" %}
+
+    {% block title %}
+        {{ product.name }}
+    {% endblock %}
+{% block head %}
+    <meta property="og:image" content="/img/{{ product.image }}" />
+    <meta property="product:pretax_price:amount" content="16.66" />
+    <meta property="product:pretax_price:currency" content="GBP" />
+    <meta property="product:price:amount" content="19.99" />
+    <meta property="product:price:currency" content="GBP" />
+    <meta property="product:weight:value" content="3.500000" />
+    <meta property="product:weight:units" content="kg" />
+{% endblock %}
+
+    {#<title>TEST PROJET</title>#}
+
+{# No price attribute !! #}
+
+{% block current_page_title %}Product: {{ product.name }}{% endblock %}
+{% block content %}
+    <section class="container" role="application">
+        <div class="row">
+            <div class="col-4">
+                <figure>
+                    {#alt attribute add #}
+                    <img class="card-img-top border pb-2" src="/img/{{ product.image }}" alt="{{ product.name }}"/>
+                    {#<figcaption>{{ product.name }}</figcaption>#}
+                </figure>
+            </div>
+            <div class="col-8">
+                <p>{{ product.description }}</p>
+                <p>Stock level: {{ product.stock }}</p>
+                <a class="btn btn-primary" href="/cart/{{ product.id }}">Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="mt-4 mb-4">
+            </div>
+            <div class="col-md-12">
+                <a href="/products/list">Back to list</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
