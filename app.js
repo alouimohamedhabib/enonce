@@ -4,18 +4,20 @@
  * @type {*}
  */
 var express = require('express');
+
+
 const router = express.Router();
 var path = require("path");
-var logger       = require( 'morgan');
-var cookieParser = require( 'cookie-parser');
-var bodyParser   = require( 'body-parser');
-var http         = require( 'http');
-var routeProducts  =  require( './routes/products');
-var routeCart =  require( './routes/cart');
-var routeIndex    =  require( './routes/index');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var http = require('http');
+var routeProducts = require('./routes/products');
+var routeCart = require('./routes/cart');
+var routeIndex = require('./routes/index');
 var db = require("./lib/db_connection");
 var app = express();
-app.use(express.static(path.join(__dirname ,"public")));
+
 /**
  * Server setup
  */
@@ -28,10 +30,11 @@ let port = process.env.PORT || 3001;
  */
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.set("view engine","twig");
-app.use(express.static('views'));
+app.set("view engine", "twig");
+// app.use(express.static('views')); // folder views contain non static files
+app.use(express.static(path.join(__dirname, "public")));
 
 /**
  * routes
@@ -39,10 +42,10 @@ app.use(express.static('views'));
 // app.get('/', routeIndex);
 app.use('/products', routeProducts);
 app.use('/cart', routeCart);
-app.get('/' , function (req , res) {
+app.get('/', function (req, res) {
     res.redirect("products/list")
-} )
-app.close = function() {
+})
+app.close = function () {
     server.close();
 }
 

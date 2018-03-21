@@ -25,9 +25,9 @@
                                 {#<h1 class="card-title">{{ product.name }}</h1>#}
                                 <h2 class="card-title pb-2">{{ product.name }}</h2>
                             </span>
-                        <h6 class="card-text">{{ product.description | slice(0 , 100 ) ~"..." }}</h6>
+                        <h6 class="card-text mt-3 mb-3">{{ product.description | slice(0 , 100 ) ~"..." }}</h6>
                         <a class="btn btn-primary" href="/products/view/{{ product.id }}" title="View more">
-                            View More
+                            View details
                         </a>
                     </div>
                 </div>
