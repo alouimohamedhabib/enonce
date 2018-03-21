@@ -20,6 +20,7 @@
     "dateformat": "^2.0.0",
     "debug": "~2.2.0",
     "express": "~4.13.1",
+    "express-translate": "^0.4.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
